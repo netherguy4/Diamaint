@@ -233,8 +233,9 @@ h6 {
   height: 1113px;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-animation: top-slide 4s ease 1 normal running 0s none;
-          animation: top-slide 4s ease 1 normal running 0s none;
+  opacity: 0;
+  -webkit-animation: top-slide 4s ease 1 normal running 0s forwards;
+          animation: top-slide 4s ease 1 normal running 0s forwards;
 }
 .about__bg-img:nth-child(2) {
   left: -420px;
