@@ -1,0 +1,16 @@
+.navigation
+	flex: 1 1 auto
+	&__list
+		display: flex
+		gap: 10px
+	&__element
+
+	&__button
+		padding: 25px 15px
+		border-radius: 3px
+		background: transparent
+		opacity: 0.5
+		&_active
+			@extend .navigation__button
+			background: rgba(81, 80, 118, 0.10)
+			opacity: 1
