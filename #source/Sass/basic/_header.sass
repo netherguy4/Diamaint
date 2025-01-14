@@ -1,5 +1,13 @@
 .header
 	background: rgba(237, 236, 246, 1)
+	// display: none
+	&_fixed
+		background: rgba(237, 236, 246, 0.3)
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		z-index: 3
 	&__content
 		display: flex
 		justify-content: space-between
@@ -13,6 +21,7 @@
 		height: 67px
 		width: 67px
 		position: relative
+		border-radius: 50%
 	&__logo-img
 		@include image-fit
 	&__shopping-cart

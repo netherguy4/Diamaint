@@ -1,49 +1,68 @@
 .about
-	position: relative
+	display: grid
+	grid-template-columns: repeat(auto-fit,minmax(450px, 1fr))
 	&__bg-img
-		position: absolute
+		position: relative
 		z-index: -1
-		&:nth-child(1)
-			right: -450px
-			top: -250px
-			width: 1455px
-			height: 1113px
-			object-fit: cover
-			opacity: 0
+		grid-row: span 2
+		&_wide
+			position: relative
+			z-index: -1
+			grid-column: span 2
+		&_active
 			animation: top-slide 4s ease 1 normal running 0s forwards
-		&:nth-child(2)
-			left: -420px
-			top: 480px
-			scale: -1 1
-			opacity: 0.15
-			width: 976px
-			height: 648px
-			object-fit: cover
-			// display: none
-		&:nth-child(3)
-			display: none
+	#bg-img-1
+		position: absolute
+		top: -34%
+		left: -119%
+		width: 1455px
+		height: 1113px
+		object-fit: cover
+	#bg-img-2
+		position: absolute
+		top: -42%
+		left: -93%
+		width: 976px
+		height: 130%
+		// object-fit: cover
+		opacity: 0.2
+		scale: -1 1
+	#bg-img-3
+		position: absolute
+		top: -200%
+		left: -43%
+		width: 1734px
+		height: 1158px
+		object-fit: cover
+		scale: -1 1
 	&__title
 		color: #515076
 		font-family: "Playfair Display"
-		font-size: 230px
 		font-weight: 400
 		line-height: 212.52px
-		margin: 0 0 60px
+		font-size: 170px
+		@media (min-width: 1465px)
+			grid-column: span 2
+			font-size: 230px
 	&__subtitle
 		color: #63678C
 		font-family: Montserrat
 		font-size: 36px
 		line-height: 132.675%
-		position: absolute
-		top: 310px
-		left: 3px
 		max-width: 250px
+		margin: 95px 0 0
+	#about__subtitle-2
+		color: #757AA5
+		font-weight: 300
+		line-height: 109.4%
+		max-width: 350px
+		margin: 95px auto
 	&__article
 		display: flex
 		flex-direction: column
-		max-width: 400px
-		margin: 0 auto
+		max-width: 390px
 		gap: 30px
+		// padding: 0 20px 0 40px
 	&__text
 		color: var(--body-text, #888794)
 		font-family: Montserrat
@@ -57,7 +76,7 @@
 			@extend .about__text
 			color: #828282
 			font-weight: 500
-			margin: 0 0 45px 0
+			margin: 60px 0 45px 0
 	&__button
 		margin: 95px auto
 		display: block
@@ -74,3 +93,17 @@
 		letter-spacing: 4.16px
 		text-transform: uppercase
 		padding: 0 30px
+	&__sub-subtitle
+		color: #888794
+		text-align: right
+		font-family: "Work Sans"
+		font-size: 16px
+		font-weight: 500
+		line-height: 179.99%
+		letter-spacing: 4.8px
+		text-transform: uppercase
+		max-width: 172px
+		margin: 95px 0 0 auto
+		&_bold
+			font-weight: 300
+			font-size: 36.8px

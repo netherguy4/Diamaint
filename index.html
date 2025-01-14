@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=1920, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<title>Diamaint</title>
 	<link rel="stylesheet" href="Css/style.css">
 </head>
@@ -46,10 +46,10 @@
 			<div class="container">
 				<div class="main__content">
 					<section class="about">
-						<img class="about__bg-img" src="Img/bg-img1.png" alt="">
-						<img class="about__bg-img" src="Img/bg-img2.png" alt="">
-						<img class="about__bg-img" src="Img/bg-img3.png" alt="">
 						<h1 class="about__title">Diamaint</h1>
+						<div class="about__bg-img about__bg-img_active">
+							<img id="bg-img-1" src="Img/bg-img1.png" alt="">
+						</div>
 						<h3 class="about__subtitle">Натуральная косметика <br>с привкусом Ирландии</h3>
 						<div class="about__article">
 							<p class="about__text_main">Diamaint — <span class="about__text_bold">одуванчик</span> в переводе
@@ -62,10 +62,76 @@
 								традиционными ирландскими рецептами для того, чтобы придать вашей коже здоровый и цветущий вид
 							</p>
 						</div>
+						<div class="about__bg-img">
+							<img id="bg-img-2" src="Img/bg-img2.png" alt="">
+						</div>
 						<button class="about__button">Выбрать продукт</button>
+						<h4 class="about__sub-subtitle"><span class="about__sub-subtitle_bold">*</span><br>Подбираем комплекс
+							специально для вашего типа кожи</h4>
 						<div class="about__article">
 							<p class="about__text">В основе — активные натуральные комплексы, витамины С, А, РР, В И Е, масла,
 								воски, минералы и натуральные солнцезащитные компоненты. </p>
+						</div>
+						<h3 id="about__subtitle-2" class="about__subtitle">Diamaint — только натуральные ингридиенты</h3>
+						<div class="about__article">
+							<p class="about__text">
+								Ингридиенты контролируются по качеству и происхождению. Большинство из них имеют органический
+								сертификат Ecoсert и Soil Association. Сочетание компонентов в каждой линейке подобрано с учетом
+								особенностей типа кожи.
+							</p>
+						</div>
+						<div class="about__bg-img_wide">
+							<img id="bg-img-3" src="Img/bg-img3.png" alt="">
+						</div>
+					</section>
+					<section class="catalogue">
+						<img class="catalogue__bg-img" src="Img/bg-img4.png" alt="">
+						<div class="catalogue__container">
+							<div class="catalogue__content">
+								<h2 class="catalogue__title">Выбери свой продукт</h2>
+								<div class="catalogue__products">
+									<div class="product">
+										<button class="product__button"></button>
+										<div class="product__content">
+											<div class="product__image">
+												<img class="product__image-img" src="Img/product-img1.png" alt="">
+											</div>
+											<div class="product__title">Увлажняющий<br>мусс</div>
+											<div class="product__price">
+												<p>2 750 ₽</p>
+												<img class="product__button-img" src="Img/shopping-cart2.png" alt="buy">
+											</div>
+										</div>
+									</div>
+									<div class="product_sale">
+										<button class="product__button"></button>
+										<div class="product__content_sale">
+											<div class="product__image_sale">
+												<img class="product__image-img" src="Img/product-img2.png" alt="">
+											</div>
+											<div class="product__title">Увлажняющая<br>маска</div>
+											<div class="product__price_sale">
+												<p>3 750</p>
+												<p>3500 ₽</p>
+												<img class="product__button-img" src="Img/shopping-cart2.png" alt="buy">
+											</div>
+										</div>
+									</div>
+									<div class="product">
+										<button class="product__button"></button>
+										<div class="product__content">
+											<div class="product__image">
+												<img class="product__image-img" src="Img/product-img3.png" alt="">
+											</div>
+											<div class="product__title">Гель<br>для умывания</div>
+											<div class="product__price">
+												<p>1 650 ₽</p>
+												<img class="product__button-img" src="Img/shopping-cart2.png" alt="buy">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</section>
 				</div>

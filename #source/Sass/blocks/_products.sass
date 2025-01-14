@@ -1,0 +1,80 @@
+.product
+	flex: 1 1 329px
+	background: #F7F7FA
+	min-width: 305px
+	position: relative
+	&_sale
+		@extend .product
+		flex: 1 1 380px
+		background: url(/../../Img/sale.svg) #F7F7FA 20px 20px no-repeat
+	&__content
+		font-family: Montserrat
+		padding: 60px 40px 50px
+		position: relative
+		&_sale
+			@extend .product__content
+			padding: 60px 45px 50px
+	&__image
+		position: relative
+		padding: 0 0 280px
+		margin: 0 -40px
+		&_sale
+			@extend .product__image
+			padding: 0 0 350px
+			margin: 0 -45px
+	&__image-img
+		@include image-fit
+		object-fit: contain
+	&__title
+		position: relative
+		color: #515076
+		font-size: 20px
+		font-weight: 400
+		line-height: 135.99%
+		&::before
+			content: 'для нормальной кожи'
+			display: block
+			color: #A5A3B9
+			font-size: 12px
+			font-weight: 500
+			line-height: 199.99%
+			letter-spacing: 2.76px
+			text-transform: uppercase
+			margin: 0 0 10px
+	&__price
+		display: flex
+		width: 100%
+		margin: 35px 0 0
+		color: #515076
+		font-family: Montserrat
+		font-size: 20px
+		font-weight: 500
+		line-height: 135.99%
+		&_sale
+			margin: 35px 0 0
+			display: flex
+			align-items: baseline
+			gap: 10px
+			& p
+				color: rgba(81, 80, 118, 0.80)
+				font-family: Montserrat
+				font-size: 24px
+				font-weight: 500
+				line-height: 135.99%
+			& p:first-child
+				color: rgba(81, 80, 118, 0.60)
+				font-size: 18px
+				font-weight: 500
+				line-height: 135.99%
+				text-decoration: line-through
+	&__button
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 1
+		background: transparent
+		&-img
+			align-self: flex-end
+			margin: 0 0 0 auto
