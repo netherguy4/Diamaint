@@ -1,0 +1,68 @@
+$trTime: .3s
+.article
+	font-family: Montserrat
+	font-weight: 400
+	background: #F7F7FA
+	box-shadow: #515076 0 -6px 0 0
+	transition: box-shadow $trTime
+	height: 400px
+	display: flex
+	flex-direction: column
+	@include hover
+		box-shadow: #515076 0 -12px 0 0
+	&:first-child
+		grid-row: span 2
+		transform: translate(0, 51%)
+	&:nth-child(3)
+		grid-row: span 2
+		transform: translate(0, 30%)
+	&__title
+		position: relative
+		color: #515076
+		font-size: 20px
+		line-height: 135.99%
+		padding: 0 39px 0 49px
+		margin: 70px 0 0
+		&::before
+			position: absolute
+			content: 'Совет'
+			top: -5px
+			left: 49px
+			transform: translate(0, -100%)
+			color: #A5A3B9
+			font-size: 12px
+			font-weight: 500
+			line-height: 199.99%
+			letter-spacing: 2.76px
+			text-transform: uppercase
+	&__subtitle
+		color: #888794
+		font-size: 14px
+		line-height: 180%
+		padding: 0 15px 0 48px
+		margin: 30px 0 0
+		flex: 1 1 auto
+	&__link
+		position: relative
+		display: flex
+		align-items: center
+		gap: 7px
+		color: #515076
+		font-size: 12px
+		font-weight: 500
+		line-height: 199.99%
+		letter-spacing: 2.76px
+		text-transform: uppercase
+		padding: 35px 0 35px 13px
+		&::before
+			content: ''
+			width: 25px
+			border: 0.5px solid #515076
+			transition: width $trTime ease-in-out
+		@include hover
+			&::before
+				width: 100px
+		&:active
+			&::before
+				transition: width .1s ease-in-out
+				width: 50px

@@ -1,3 +1,4 @@
+$trTime: .3s
 .slider-special
 	&__content
 		display: flex
@@ -8,10 +9,6 @@
 		width: 337px
 		position: relative
 	&__title
-		color: #757AA5
-		font-size: 70px
-		font-weight: 275
-		line-height: 109.4%
 		padding: 20px 0 0 0
 	&__subtitle
 		margin: 100px 0 0
@@ -26,19 +23,26 @@
 		overflow: hidden
 		position: absolute
 		bottom: 0
+		transition: background-color $trTime, color $trTime, box-shadow .2s, transform .2s
+		border: 2px solid #888794
+		@include hover
+			background-color: #515076
+			color: rgba(255, 255, 255, 0.8)
+			box-shadow: #515076 0 7px 0 0
+		&:active
+			transform: translateY(7px)
+			box-shadow: #515076 0 0 0 0
 		&_left
 			@extend .slider-special__button
 			scale: -1 1
 			left: 0
 		&_right
 			@extend .slider-special__button
-			left: 19px
-			transform: translate(100%, 0)
+			left: 93px
 		&_disabled
 			opacity: 0.4
 			cursor: default
 		&-img
-
 	&__slider-section
 		position: relative
 		flex: 1 0 810px

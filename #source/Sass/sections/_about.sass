@@ -1,6 +1,8 @@
+$trTime: .3s
 .about
-	display: grid
-	grid-template-columns: repeat(auto-fit,minmax(450px, 1fr))
+	&__content
+		display: grid
+		grid-template-columns: repeat(auto-fit,minmax(450px, 1fr))
 	&__bg-img
 		position: relative
 		z-index: -1
@@ -104,6 +106,14 @@
 		letter-spacing: 4.16px
 		text-transform: uppercase
 		padding: 0 30px
+		transition: background-color $trTime, color $trTime, box-shadow .2s, transform .2s
+		border: 2px solid #c9c9c9
+		@include hover
+			background-color: #515076
+			box-shadow: #515076 0 7px 0 0
+		&:active
+			transform: translateY(7px)
+			box-shadow: #515076 0 0 0 0
 	&__sub-subtitle
 		color: #888794
 		text-align: right

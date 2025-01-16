@@ -1,0 +1,93 @@
+$trTime: .3s
+.product-special
+	position: relative
+	background: #F7F7FA
+	font-family: Montserrat
+	transition: background $trTime
+	@include hover
+		background: #515076
+		.product-special__content
+			color: #A5A3B9
+			filter: brightness(1.5)
+		.product-special__image-img
+			filter: brightness(0.75)
+		.product-special__button-img
+			filter: brightness(2)
+			scale: 1.5
+	&__button
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background: transparent
+		z-index: 2
+	&__content
+		height: 100%
+		display: flex
+		flex-direction: column
+		color: #515076
+		transition: color $trTime, filter $trTime
+	&__image-section
+		flex: 1 1 auto
+		display: flex
+		flex-direction: column
+		justify-content: flex-end
+	&__image
+		position: relative
+		flex: 1 1 auto
+		&-img
+			position: absolute
+			z-index: 2
+			bottom: 0
+			left: 0
+			transition: filter $trTime
+		&_2
+			@extend .product-special__image
+			.product-special__image-img
+				height: 300px
+				left: -10%
+				&:nth-child(2)
+					left: 15%
+					z-index: 1
+					bottom: 5%
+		&_3
+			@extend .product-special__image
+			.product-special__image-img
+				z-index: 2
+				left: 1%
+				&:first-child
+					z-index: 1
+					height: 300px
+					left: -20%
+					bottom: 6%
+				&:nth-child(2)
+					z-index: 1
+					height: 300px
+					left: 20%
+					bottom: 5%
+	&__text-section
+		padding: 0 40px 40px
+	&__subtitle
+		font-size: 18px
+		font-weight: 400
+		line-height: 135.99%
+		height: 100px
+	&__price
+		display: flex
+		gap: 15px
+		align-items: baseline
+		margin: 5px 0 0
+		& p
+			opacity: 0.8
+			font-size: 20px
+			font-weight: 500
+			line-height: 135.99%
+			&:first-child
+				opacity: 0.6
+				font-size: 18px
+				text-decoration: line-through
+	&__button-img
+		transition: filter $trTime, scale $trTime
+		margin: 0 0 0 auto
+		transform: translate(-25%, 25%)

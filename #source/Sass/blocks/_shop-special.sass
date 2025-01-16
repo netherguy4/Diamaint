@@ -1,0 +1,61 @@
+$trTime: .3s
+.shop-special
+	position: relative
+	&__bg-img
+		position: absolute
+		width: 1127.97px
+		height: 1066.411px
+		scale: -1 1
+		rotate: 20deg
+		transform: translate(55%, -18%)
+		opacity: 0.05
+		filter: brightness(0)
+		z-index: -1
+	&__container
+		max-width: 1120px
+		margin: 0 auto
+	&__content
+		display: flex
+		gap: 35px
+		align-items: flex-end
+	&__product
+		flex: 1 1 auto
+		height: 800px
+		position: relative
+		overflow: hidden
+		&::before
+			transition: box-shadow $trTime, color $trTime, scale $trTime
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			content: 'СКИДКА 20%'
+			height: 200px
+			background: rgba(81, 80, 118, 0.2)
+			display: flex
+			align-items: center
+			justify-content: center
+			color: #515076
+			font-family: Montserrat
+			font-size: 36px
+			font-weight: 600
+			line-height: 135.99%
+		&:first-child
+			height: 600px
+			&::before
+				height: 100px
+				font-weight: 400
+				background: rgba(81, 80, 118, 0.1)
+				content: 'СКИДКА 5%'
+		&:nth-child(2)
+			height: 700px
+			&::before
+				height: 150px
+				font-weight: 500
+				background: rgba(81, 80, 118, 0.15)
+				content: 'СКИДКА 10%'
+		@include hover
+			&::before
+				box-shadow: #fff 0 2px 0 0
+				color: #fff
+				scale: 1.05

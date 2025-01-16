@@ -34,8 +34,18 @@
 							</li>
 						</ul>
 					</nav>
-					<button type="button" class="header__shopping-cart"><img class="header__shopping-cart-img"
-							src="Img/shopping-cart.svg" alt="Cart"></button>
+					<button type="button" class="header__shopping-cart">
+						<svg class="header__shopping-cart-img" xmlns="http://www.w3.org/2000/svg" width="22" height="26"
+							viewBox="0 0 22 26" fill="none">
+							<path d="M21 25.0768H1L2.53846 8.38452H19.6154L21 25.0768Z" stroke="currentColor"
+								stroke-width="1.46154" stroke-linecap="round" stroke-linejoin="round" />
+							<path
+								d="M6.84619 11.7692C6.84619 11.7692 6.84619 5.76923 6.84619 4.53846C6.84619 3.30769 8.07696 1 11 1C13.7693 1 15.1539 3.38462 15.1539 4.53846C15.1539 5.52308 15.1539 9.76923 15.1539 11.7692"
+								stroke="currentColor" stroke-width="1.46154" />
+							<circle cx="15.1539" cy="11.6154" r="1.69231" fill="currentColor" />
+							<circle cx="6.84612" cy="11.6154" r="1.69231" fill="currentColor" />
+						</svg>
+					</button>
 					<div class="header__socials">
 						<a class="header__social-link" href="#">Instagram</a>
 						<a class="header__social-link" href="#">Facebook</a>
@@ -44,53 +54,63 @@
 			</div>
 		</header>
 		<main class="main">
-			<div class="container">
-				<div class="main__content">
-					<section class="about">
-						<h1 class="about__title">Diamaint</h1>
-						<div class="about__bg-img about__bg-img_active">
-							<img id="bg-img-1" src="Img/bg-img1.png" alt="">
+			<div class="main__content">
+				<section class="about">
+					<div class="container">
+						<div class="about__content">
+							<h1 class="about__title">Diamaint</h1>
+							<div class="about__bg-img about__bg-img_active">
+								<img id="bg-img-1" src="Img/bg-img1.png" alt="">
+							</div>
+							<h3 class="about__subtitle">Натуральная косметика <br>с привкусом Ирландии</h3>
+							<div class="about__article">
+								<p class="about__text_main">Diamaint — <span class="about__text_bold">одуванчик</span> в
+									переводе
+									<br>с
+									ирландского
+								</p>
+								<p class="about__text">Косметика, после которой вы уже никогда не будете прежней и обретёте
+									новую
+									жизнь, где наша продукция будет вашим верным спутником и помощником</p>
+								<p class="about__text">Используем всю силу природы, а так же новейшие разработки индустрии вкупе
+									традиционными ирландскими рецептами для того, чтобы придать вашей коже здоровый и цветущий
+									вид
+								</p>
+							</div>
+							<div class="about__bg-img">
+								<img id="bg-img-2" src="Img/bg-img2.png" alt="">
+							</div>
+							<button class="about__button">Выбрать продукт</button>
+							<h4 class="about__sub-subtitle"><span class="about__sub-subtitle_bold">*</span><br>Подбираем
+								комплекс
+								специально для вашего типа кожи</h4>
+							<div class="about__article">
+								<p class="about__text">В основе — активные натуральные комплексы, витамины С, А, РР, В И Е,
+									масла,
+									воски, минералы и натуральные солнцезащитные компоненты. </p>
+							</div>
+							<h3 id="about__subtitle-2" class="about__subtitle">Diamaint — только натуральные ингридиенты</h3>
+							<div class="about__article">
+								<p class="about__text">
+									Ингридиенты контролируются по качеству и происхождению. Большинство из них имеют органический
+									сертификат Ecoсert и Soil Association. Сочетание компонентов в каждой линейке подобрано с
+									учетом
+									особенностей типа кожи.
+								</p>
+							</div>
+							<div class="about__bg-img_wide">
+								<div class="about__gradient"></div>
+								<img id="bg-img-3" src="Img/bg-img3.png" alt="">
+							</div>
 						</div>
-						<h3 class="about__subtitle">Натуральная косметика <br>с привкусом Ирландии</h3>
-						<div class="about__article">
-							<p class="about__text_main">Diamaint — <span class="about__text_bold">одуванчик</span> в переводе
-								<br>с
-								ирландского
-							</p>
-							<p class="about__text">Косметика, после которой вы уже никогда не будете прежней и обретёте новую
-								жизнь, где наша продукция будет вашим верным спутником и помощником</p>
-							<p class="about__text">Используем всю силу природы, а так же новейшие разработки индустрии вкупе
-								традиционными ирландскими рецептами для того, чтобы придать вашей коже здоровый и цветущий вид
-							</p>
-						</div>
-						<div class="about__bg-img">
-							<img id="bg-img-2" src="Img/bg-img2.png" alt="">
-						</div>
-						<button class="about__button">Выбрать продукт</button>
-						<h4 class="about__sub-subtitle"><span class="about__sub-subtitle_bold">*</span><br>Подбираем комплекс
-							специально для вашего типа кожи</h4>
-						<div class="about__article">
-							<p class="about__text">В основе — активные натуральные комплексы, витамины С, А, РР, В И Е, масла,
-								воски, минералы и натуральные солнцезащитные компоненты. </p>
-						</div>
-						<h3 id="about__subtitle-2" class="about__subtitle">Diamaint — только натуральные ингридиенты</h3>
-						<div class="about__article">
-							<p class="about__text">
-								Ингридиенты контролируются по качеству и происхождению. Большинство из них имеют органический
-								сертификат Ecoсert и Soil Association. Сочетание компонентов в каждой линейке подобрано с учетом
-								особенностей типа кожи.
-							</p>
-						</div>
-						<div class="about__bg-img_wide">
-							<div class="about__gradient"></div>
-							<img id="bg-img-3" src="Img/bg-img3.png" alt="">
-						</div>
-					</section>
-					<section class="catalogue">
-						<img class="catalogue__bg-img" src="Img/bg-img4.png" alt="">
-						<div class="catalogue__container">
-							<div class="catalogue__content">
-								<h2 class="catalogue__title">Выбери свой продукт</h2>
+					</div>
+				</section>
+				<section class="catalogue">
+					<div class="container">
+						<div class="catalogue__content">
+							<img class="catalogue__bg-img" src="Img/bg-img4.png" alt="">
+							<div class="catalogue__container">
+								<h2 class="catalogue__title title">Выбери свой продукт</h2>
 								<div class="catalogue__products">
 									<div class="product">
 										<button type="button" class="product__button"></button>
@@ -150,48 +170,181 @@
 								</div>
 							</div>
 						</div>
-					</section>
-					<section class="special">
-						<div class="special__slider slider-special">
-							<div class="slider-special__content">
-								<div class="slider-special__title-section">
-									<div class="slider-special__title">Акции</div>
-									<p class="slider-special__subtitle">Каждый месяц мы отбираем специальную линейку
-										продуктов, которая нравится вам и снижаем цены!</p>
-									<button type="button" class="slider-special__button_left slider-special__button_disabled">
-										<svg class="slider-special__button-img" xmlns="http://www.w3.org/2000/svg" width="74"
-											height="74" viewBox="0 0 74 74" fill="none">
-											<circle cx="37.2728" cy="36.7258" r="36.2257" stroke="currentColor" />
-											<path d="M33.6002 27.1771L43.1489 36.7258L33.6002 46.2745" stroke="currentColor"
-												stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-										</svg>
-									</button>
-									<button type="button" class="slider-special__button_right">
-										<svg class="slider-special__button-img" xmlns="http://www.w3.org/2000/svg" width="74"
-											height="74" viewBox="0 0 74 74" fill="none">
-											<circle cx="37.2728" cy="36.7258" r="36.2257" stroke="currentColor" />
-											<path d="M33.6002 27.1771L43.1489 36.7258L33.6002 46.2745" stroke="currentColor"
-												stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-										</svg>
-									</button>
+					</div>
+				</section>
+				<section class="special">
+					<div class="container">
+						<div class="special__content">
+							<div class="special__slider slider-special">
+								<div class="slider-special__content">
+									<div class="slider-special__title-section">
+										<div class="slider-special__title title">Акции</div>
+										<p class="slider-special__subtitle">Каждый месяц мы отбираем специальную линейку
+											продуктов, которая нравится вам и снижаем цены!</p>
+										<button type="button" class="slider-special__button_left slider-special__button_disabled">
+											<svg class="slider-special__button-img" xmlns="http://www.w3.org/2000/svg" width="74"
+												height="74" viewBox="0 0 74 74" fill="none">
+												<path d="M33.6002 27.1771L43.1489 36.7258L33.6002 46.2745" stroke="currentColor"
+													stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</button>
+										<button type="button" class="slider-special__button_right">
+											<svg class="slider-special__button-img" xmlns="http://www.w3.org/2000/svg" width="74"
+												height="74" viewBox="0 0 74 74" fill="none">
+												<path d="M33.6002 27.1771L43.1489 36.7258L33.6002 46.2745" stroke="currentColor"
+													stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</button>
+									</div>
+									<div class="slider-special__slider-section">
+										<div class="slider-special__slider-section-body">
+											<div class="slider-special__number">01</div>
+											<p class="slider-special__slider-text">Invisible symphony — ваша волшебная палочка для
+												борьбы с несовершенствами</p>
+											<p class="slider-special__slider-text">Сочетая энергию природы и возможности науки
+												восстанавливает вашу кожу, помогает регенерации клеток, разглаживает рельеф,
+												интенсивно
+												увлажняет надолго.</p>
+											<img class="slider-special__img" src="Img/product-img2.png" alt="">
+											<div class="slider-special__gradient"></div>
+										</div>
+									</div>
 								</div>
-								<div class="slider-special__slider-section">
-									<div class="slider-special__slider-section-body">
-										<div class="slider-special__number">01</div>
-										<p class="slider-special__slider-text">Invisible symphony — ваша волшебная палочка для
-											борьбы с несовершенствами</p>
-										<p class="slider-special__slider-text">Сочетая энергию природы и возможности науки
-											восстанавливает вашу кожу, помогает регенерации клеток, разглаживает рельеф,
-											интенсивно
-											увлажняет надолго.</p>
-										<img class="slider-special__img" src="Img/product-img2.png" alt="">
-										<div class="slider-special__gradient"></div>
+							</div>
+							<div class="special__shop shop-special">
+								<img class="shop-special__bg-img" src="Img/bg-img5.png" alt="">
+								<div class="shop-special__container">
+									<div class="shop-special__content">
+										<div class="shop-special__product product-special">
+											<button type="button" class="product-special__button"></button>
+											<div class="product-special__content">
+												<div class="product-special__image-section">
+													<div class="product-special__image">
+														<img class="product-special__image-img" src="Img/product-img4.png" alt="">
+													</div>
+												</div>
+												<div class="product-special__text-section">
+													<div class="product-special__subtitle">Приобретая увлажняющий крем и маску, вы
+														получаете скидку 5% на весь товар</div>
+													<div class="product-special__price">
+														<p>5000</p>
+														<p>4750 ₴</p>
+														<img class="product-special__button-img" src="Img/shopping-cart2.png"
+															alt="buy">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="shop-special__product product-special">
+											<button type="button" class="product-special__button"></button>
+											<div class="product-special__content">
+												<div class="product-special__image-section">
+													<div class="product-special__image_2">
+														<img class="product-special__image-img" src="Img/product-img1.png" alt="">
+														<img class="product-special__image-img" src="Img/product-img3.png" alt="">
+													</div>
+												</div>
+												<div class="product-special__text-section">
+													<div class="product-special__subtitle">Приобретая увлажняющий мусс и гель для
+														умывания, вы получаете скидку 10% на весь товар</div>
+													<div class="product-special__price">
+														<p>4400</p>
+														<p>3960 ₴</p>
+														<img class="product-special__button-img" src="Img/shopping-cart2.png"
+															alt="buy">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="shop-special__product product-special">
+											<button type="button" class="product-special__button"></button>
+											<div class="product-special__content">
+												<div class="product-special__image-section">
+													<div class="product-special__image_3">
+														<img class="product-special__image-img" src="Img/product-img3.png" alt="">
+														<img class="product-special__image-img" src="Img/product-img1.png" alt="">
+														<img class="product-special__image-img" src="Img/product-img4.png" alt="">
+													</div>
+												</div>
+												<div class="product-special__text-section">
+													<div class="product-special__subtitle">Приобретая весь набор Invisible symphony,
+														вы
+														получаете скидку 20% на весь товар</div>
+													<div class="product-special__price">
+														<p>9400</p>
+														<p>7520 ₴</p>
+														<img class="product-special__button-img" src="Img/shopping-cart2.png"
+															alt="buy">
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</section>
-				</div>
+					</div>
+				</section>
+				<section class="hero">
+					<img src="Img/bg-img6.png" alt="" class="hero__bg-img">
+					<div class="container">
+						<div class="hero__content">
+							<h2 class="hero__title">Diamaint</h2>
+							<div class="hero__images">
+								<div class="hero__image_circle"></div>
+								<img class="hero__image_girl" src="Img/hero-img1.png" alt="">
+								<div class="hero__image_gradient"></div>
+								<img class="hero__image_berries" src="Img/hero-img2.png" alt="">
+							</div>
+							<div class="hero__text-section">
+								<h4 class="hero__subtitle">
+									Протестировали и довольны результатом
+									<span class="hero__subtitle-number">6800</span>
+									<span class="hero__subtitle-span">женщин</span>
+								</h4>
+								<p class="hero__text">
+									96% женщин заметили положительный результат уже после недели использования линейки средств.
+									Кожа стала более ухоженной, увлажненной и напитанной. Исчезли или значительно уменьшились
+									воспаления. А приятный аромат и легкая текстура стали отличным дополнением с утренне-вечерним
+									ритуалам ухода
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="useful">
+					<div class="container">
+						<div class="useful__content">
+							<h2 class="useful__title title">Полезно узнать</h2>
+							<div class="useful__articles">
+								<div class="article">
+									<h6 class="article__title">Как выбрать<br>крем</h6>
+									<p class="article__subtitle">7 критериев правильного выбора. Под воздействием окружающей
+										среды кожа теряет питательные вещества...</p>
+									<a href="#" class="article__link">читать</a>
+								</div>
+								<div class="article">
+									<h6 class="article__title">Что добавить к зимнему уходу</h6>
+									<p class="article__subtitle">Зимой кожа лица особенно остро нуждается в уходе. Холод и ветер,
+										сухость воздуха отапливаемых помещений...</p>
+									<a href="#" class="article__link">читать</a>
+								</div>
+								<div class="article">
+									<h6 class="article__title">Как правильно наносить крем</h6>
+									<p class="article__subtitle">Любой тип кожи нельзя сильно натирать при очищении или
+										тонизировании, все движения...</p>
+									<a href="#" class="article__link">читать</a>
+								</div>
+								<div class="article">
+									<h6 class="article__title">Как узнать свой тип кожи</h6>
+									<p class="article__subtitle">У одних кожа от природы жирная, у других сухая и тонкая,
+										считается, что в современных условиях...</p>
+									<a href="#" class="article__link">читать</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
 			</div>
 		</main>
 	</div>

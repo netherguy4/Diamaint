@@ -1,3 +1,4 @@
+$trTime: .3s
 .header
 	background: rgba(237, 236, 246, 1)
 	background: rgba(237, 236, 246, 0.8)
@@ -29,6 +30,11 @@
 		background-color: #fff
 		border-radius: 50%
 		position: relative
+		color: #373737
+		transition: background-color $trTime, color $trTime
+		@include hover
+			background-color: #515076
+			color: rgba(255, 255, 255, 0.8)
 		&::after
 			content: '1'
 			color: #FFF

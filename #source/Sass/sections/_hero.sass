@@ -1,0 +1,105 @@
+.hero
+	background: #EDECF6
+	position: relative
+	&__bg-img
+		position: absolute
+		bottom: 0
+		right: 0
+		width: 638px
+		height: 1196px
+		z-index: 1
+		filter: brightness(0) saturate(100%) invert(97%) sepia(2%) saturate(2984%) hue-rotate(189deg) brightness(98%) contrast(92%)
+		transform: translate(0, 20%)
+	&__content
+		position: relative
+		display: flex
+		gap: 100px
+	&__title
+		position: absolute
+		z-index: 2
+		top: 0
+		left: 0
+		right: 0
+		z-index: 2
+		text-align: center
+		color: #D6D4E7
+		font-family: "Playfair Display"
+		font-size: 330px
+		font-weight: 400
+		line-height: 92.4%
+		user-select: none
+		transform: translate(0, -70%)
+	&__images
+		position: relative
+		flex: 1 1 auto
+	&__image
+		position: absolute
+		max-width: 100%
+		max-height: 100%
+		&_circle
+			@extend .hero__image
+			width: 546px
+			height: 546px
+			border-radius: 50%
+			background: #d6d4e7
+			top: 43%
+			left: 48%
+			transform: translate(-50%, -50%)
+		&_girl
+			@extend .hero__image
+			top: 57%
+			left: 0
+			transform: translate(10%, -50%)
+			scale: 1.25
+			filter: brightness(1.4) saturate(0.8)
+		&_berries
+			@extend .hero__image
+			width: 174px
+			height: 177px
+			top: 73%
+			left: 72%
+		&_gradient
+			@extend .hero__image
+			width: 240%
+			max-width: none
+			max-height: none
+			height: 200%
+			bottom: 0
+			left: 0
+			transform: translate(-25%, 0)
+			filter: saturate(0.9)
+			background: radial-gradient(ellipse at center, rgba(237, 236, 246,0) 0%, rgba(237, 236, 246,0) 40%, rgba(237, 236, 246,1) 58%,rgba(237, 236, 246,1) 100%)
+	&__text-section
+		position: relative
+		width: calc(462/1400*100%)
+		padding: 245px 0 210px
+		color: #888794
+		font-family: Montserrat
+		font-size: 16px
+		font-weight: 500
+		line-height: 199.99%
+		z-index: 2
+	&__subtitle
+		color: #A5A3B9
+		line-height: 179.99%
+		letter-spacing: 4.8px
+		text-transform: uppercase
+		max-width: 340px
+	&__subtitle-number
+		display: block
+		margin: 20px 0 0
+		color: #515076
+		font-size: 120px
+		font-weight: 300
+		line-height: 109.4%
+		letter-spacing: normal
+	&__subtitle-span
+		display: block
+		margin: 10px 0 0
+		color: #515076
+		font-size: 56px
+		font-weight: 200
+		line-height: 109.4%
+		letter-spacing: normal
+	&__text
+		margin: 60px 0 0
