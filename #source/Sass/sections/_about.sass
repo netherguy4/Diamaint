@@ -1,4 +1,4 @@
-$trTime: .3s
+$trTime: .3s ease-out
 .about
 	&__content
 		display: grid
@@ -111,8 +111,9 @@ $trTime: .3s
 		@include hover
 			background-color: #515076
 			box-shadow: #515076 0 7px 0 0
+			transform: translateY(-7px)
 		&:active
-			transform: translateY(7px)
+			transform: translateY(0px)
 			box-shadow: #515076 0 0 0 0
 	&__sub-subtitle
 		color: #888794

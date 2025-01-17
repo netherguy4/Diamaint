@@ -371,10 +371,10 @@ h6 {
   letter-spacing: 4.16px;
   text-transform: uppercase;
   padding: 0 30px;
-  -webkit-transition: background-color 0.3s, color 0.3s, -webkit-box-shadow 0.2s, -webkit-transform 0.2s;
-  transition: background-color 0.3s, color 0.3s, -webkit-box-shadow 0.2s, -webkit-transform 0.2s;
-  transition: background-color 0.3s, color 0.3s, box-shadow 0.2s, transform 0.2s;
-  transition: background-color 0.3s, color 0.3s, box-shadow 0.2s, transform 0.2s, -webkit-box-shadow 0.2s, -webkit-transform 0.2s;
+  -webkit-transition: background-color 0.3s ease-out, color 0.3s ease-out, -webkit-box-shadow 0.2s, -webkit-transform 0.2s;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out, -webkit-box-shadow 0.2s, -webkit-transform 0.2s;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out, box-shadow 0.2s, transform 0.2s;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out, box-shadow 0.2s, transform 0.2s, -webkit-box-shadow 0.2s, -webkit-transform 0.2s;
   border: 2px solid #c9c9c9;
 }
 @media (hover: hover) {
@@ -382,6 +382,9 @@ h6 {
     background-color: #515076;
     -webkit-box-shadow: #515076 0 7px 0 0;
             box-shadow: #515076 0 7px 0 0;
+    -webkit-transform: translateY(-7px);
+        -ms-transform: translateY(-7px);
+            transform: translateY(-7px);
   }
 }
 @media (hover: none) {
@@ -389,12 +392,15 @@ h6 {
     background-color: #515076;
     -webkit-box-shadow: #515076 0 7px 0 0;
             box-shadow: #515076 0 7px 0 0;
+    -webkit-transform: translateY(-7px);
+        -ms-transform: translateY(-7px);
+            transform: translateY(-7px);
   }
 }
 .about__button:active {
-  -webkit-transform: translateY(7px);
-      -ms-transform: translateY(7px);
-          transform: translateY(7px);
+  -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+          transform: translateY(0px);
   -webkit-box-shadow: #515076 0 0 0 0;
           box-shadow: #515076 0 0 0 0;
 }
@@ -1126,10 +1132,10 @@ h6 {
   overflow: hidden;
   position: absolute;
   bottom: 0;
-  -webkit-transition: background-color 0.3s, color 0.3s, -webkit-box-shadow 0.2s, -webkit-transform 0.2s;
-  transition: background-color 0.3s, color 0.3s, -webkit-box-shadow 0.2s, -webkit-transform 0.2s;
-  transition: background-color 0.3s, color 0.3s, box-shadow 0.2s, transform 0.2s;
-  transition: background-color 0.3s, color 0.3s, box-shadow 0.2s, transform 0.2s, -webkit-box-shadow 0.2s, -webkit-transform 0.2s;
+  -webkit-transition: background-color 0.3s ease-out, color 0.3s ease-out, -webkit-box-shadow 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out, -webkit-box-shadow 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out, box-shadow 0.3s ease-out, transform 0.3s ease-out;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out, box-shadow 0.3s ease-out, transform 0.3s ease-out, -webkit-box-shadow 0.3s ease-out, -webkit-transform 0.3s ease-out;
   border: 2px solid #888794;
 }
 @media (hover: hover) {
@@ -1138,6 +1144,9 @@ h6 {
     color: rgba(255, 255, 255, 0.8);
     -webkit-box-shadow: #515076 0 7px 0 0;
             box-shadow: #515076 0 7px 0 0;
+    -webkit-transform: translateY(-7px);
+        -ms-transform: translateY(-7px);
+            transform: translateY(-7px);
   }
 }
 @media (hover: none) {
@@ -1146,12 +1155,15 @@ h6 {
     color: rgba(255, 255, 255, 0.8);
     -webkit-box-shadow: #515076 0 7px 0 0;
             box-shadow: #515076 0 7px 0 0;
+    -webkit-transform: translateY(-7px);
+        -ms-transform: translateY(-7px);
+            transform: translateY(-7px);
   }
 }
 .slider-special__button:active, .slider-special__button_right:active, .slider-special__button_left:active {
-  -webkit-transform: translateY(7px);
-      -ms-transform: translateY(7px);
-          transform: translateY(7px);
+  -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+          transform: translateY(0px);
   -webkit-box-shadow: #515076 0 0 0 0;
           box-shadow: #515076 0 0 0 0;
 }

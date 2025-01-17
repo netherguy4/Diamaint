@@ -1,4 +1,4 @@
-$trTime: .3s
+$trTime: .3s ease-out
 .slider-special
 	&__content
 		display: flex
@@ -23,14 +23,15 @@ $trTime: .3s
 		overflow: hidden
 		position: absolute
 		bottom: 0
-		transition: background-color $trTime, color $trTime, box-shadow .2s, transform .2s
+		transition: background-color $trTime, color $trTime, box-shadow $trTime, transform $trTime
 		border: 2px solid #888794
 		@include hover
 			background-color: #515076
 			color: rgba(255, 255, 255, 0.8)
 			box-shadow: #515076 0 7px 0 0
+			transform: translateY(-7px)
 		&:active
-			transform: translateY(7px)
+			transform: translateY(0px)
 			box-shadow: #515076 0 0 0 0
 		&_left
 			@extend .slider-special__button
