@@ -1,0 +1,39 @@
+$trTime: .3s
+.img-gallery
+	display: flex
+	gap: calc( 65/590*100% )
+	position: relative
+	&-bg
+		position: absolute
+		bottom: 0
+		right: 0
+		top: 0
+		left: 0
+		background: #FAFAFA
+		scale: 1.6 1.9
+		z-index: -1
+		transform: translate(0, -11%)
+	&__item
+		&-img
+			@include image-fit
+		&:hover
+			opacity: 0.8
+		&_active
+			flex: 0 1 30%
+			position: relative
+			padding: 0 0 calc( 173/590*100% )
+			opacity: 0.5
+			transition: opacity $trTime
+			opacity: 1
+			box-shadow: #515076 0 -6px 0 0
+	&__item
+		@extend .img-gallery__item_active
+		opacity: 0.5
+	&__button
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 2
+		background: transparent
