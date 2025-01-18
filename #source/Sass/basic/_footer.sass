@@ -1,0 +1,79 @@
+$trTime: .3s
+.footer
+	position: relative
+	z-index: 2
+	&__gradient
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		z-index: 1
+		&_1
+			@extend .footer__gradient
+			background: linear-gradient(to bottom, rgba(250,250,250,1) 0%, rgba(250,250,250,1) 70%, rgba(250,250,250,0) 100%)
+			filter: blur(60px)
+			height: 60%
+			transform: translate(0, -70%)
+		&_2
+			@extend .footer__gradient
+			background: linear-gradient(to bottom, rgba(250,250,250,1) 0%, rgba(250,250,250,0) 100%)
+			height: 20%
+	&__bg-img
+		user-select: none
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		width: 100%
+		height: 100%
+		object-fit: cover
+		z-index: -1
+		scale: -1 1
+	&__content
+		position: relative
+		z-index: 2
+		margin: 230px 0 300px
+		background: #F7F7FA
+		box-shadow: 0px -6px 0px 0px #515076
+		max-width: 530px
+		display: flex
+		flex-direction: column
+		padding: 50px 10px 66px 78px
+	&__title
+
+	&__adress
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		margin: 33px 0 0 9px
+		gap: 10px
+		&-link
+			position: relative
+			color: #828282
+			font-family: Montserrat
+			font-size: 16px
+			font-style: normal
+			font-weight: 500
+			line-height: 199.99%
+			&::after
+				transition: width $trTime ease-in-out
+				content: ''
+				position: absolute
+				height: 2px
+				bottom: -5px
+				left: 0
+				width: 0px
+				background: #828282
+			@include hover
+				&::after
+					width: 100%
+	&__socials
+		margin: 10px 0 0 9px
+		display: flex
+		gap: 5px
+		&-link
+			padding: 10px
+			transition: scale $trTime
+			@include hover
+				scale: 1.5

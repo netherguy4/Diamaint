@@ -1,12 +1,16 @@
 $trTime: .3s
 .header
-	background: rgba(237, 236, 246, 1)
-	background: rgba(237, 236, 246, 0.8)
+	// background: rgba(237, 236, 246, 1)
+	background: rgba(237, 236, 246, 0.9)
 	position: fixed
 	top: 0
 	left: 0
 	right: 0
 	z-index: 10
+	transform: translateY(0%)
+	transition: transform $trTime
+	&_hidden
+		transform: translateY(-100%)
 	&__content
 		display: flex
 		justify-content: space-between
@@ -21,8 +25,12 @@ $trTime: .3s
 		width: 67px
 		position: relative
 		border-radius: 50%
+		animation: rotate 1s ease 1 normal running 0s both
 		&-img
+			transition: rotate $trTime ease-in-out
 			@include image-fit
+			@include hover
+				rotate: -360deg
 	&__shopping-cart
 		margin: 0 -34px 0 0
 		width: 60px
@@ -35,6 +43,10 @@ $trTime: .3s
 		@include hover
 			background-color: #515076
 			color: rgba(255, 255, 255, 0.8)
+		&-img
+			&_active
+				transform-origin: top center
+				animation: cart 1s ease 1 normal running 0s both
 		&::after
 			content: '1'
 			color: #FFF

@@ -16,9 +16,10 @@
 					<button type="button" class="header__logo"><img class="header__logo-img" src="Img/header__logo.svg"
 							alt="D"></button>
 					<nav class="navigation">
+						<div class="navigation__active-element navigation__active-element_about"></div>
 						<ul class="navigation__list">
 							<li class="navigation__element">
-								<button type="button" class="navigation__button_active">О продукте</button>
+								<button type="button" class="navigation__button navigation__button_active">О продукте</button>
 							</li>
 							<li class="navigation__element">
 								<button type="button" class="navigation__button">Каталог</button>
@@ -359,7 +360,7 @@
 									красивыми и уверенными в себе, помогает мне чувствовать себя счастливой!</p>
 								<div class="authors__img-gallery img-gallery">
 									<div class="img-gallery-bg"></div>
-									<div class="img-gallery__item_active">
+									<div class="img-gallery__item img-gallery__item_active">
 										<button type="button" class="img-gallery__button"></button>
 										<img class="img-gallery__item-img" src="Img/authors-img1-small.jpg" alt="">
 									</div>
@@ -376,7 +377,7 @@
 							<div class="authors__img-section">
 								<div class="authors__img-section-bg"></div>
 								<img class="authors__img-section-bg-img" src="Img/bg-img7.webp" alt="">
-								<img class="authors__img_active" src="Img/authors-img1.jpg" alt="">
+								<img class="authors__img authors__img_active" src="Img/authors-img1.jpg" alt="">
 								<img class="authors__img" src="Img/authors-img2.webp" alt="">
 								<img class="authors__img" src="Img/authors-img3.webp" alt="">
 							</div>
@@ -385,7 +386,40 @@
 				</section>
 			</div>
 		</main>
+		<footer class="footer">
+			<div class="footer__gradient_1"></div>
+			<div class="footer__gradient_2"></div>
+			<img src="Img/footer.webp" class="footer__bg-img">
+			<div class="container">
+				<div class="footer__content">
+					<h2 class="footer__title title">Контакты</h2>
+					<address class="footer__adress">
+						<a class="footer__adress-link" href="tel:+74955505050">+7 495 550 50 50</a>
+						<a class="footer__adress-link" href="https://maps.app.goo.gl/gWAoDzjvArDuNxNm9">Москва, Пресенеский
+							Вал 21</a>
+					</address>
+					<div class="footer__socials">
+						<a class="footer__socials-link" href="#">
+							<svg xmlns="http://www.w3.org/2000/svg" width="23" height="20" viewBox="0 0 23 20" fill="none">
+								<path
+									d="M21.5475 0.24707H1.61637C0.933874 0.24707 0.379761 0.721917 0.379761 1.3089V18.423C0.379761 19.01 0.933874 19.4855 1.61637 19.4855H12.3467V12.0352H9.42708V9.13136H12.3467V6.98996C12.3467 4.50549 14.1134 3.1519 16.6951 3.1519C17.9328 3.1519 18.9942 3.23142 19.3037 3.26594V5.86287L17.513 5.86351C16.1093 5.86351 15.8385 6.43655 15.8385 7.27696V9.13041H19.1875L18.7496 12.034H15.8381V19.4845H21.5471C22.2303 19.4845 22.7848 19.0084 22.7848 18.423V1.30827C22.7845 0.721917 22.2307 0.24707 21.5475 0.24707Z"
+									fill="#5B5A7E" />
+							</svg>
+						</a>
+						<a class="footer__socials-link" href="#">
+							<svg xmlns="http://www.w3.org/2000/svg" width="23" height="20" viewBox="0 0 23 20" fill="none">
+								<path
+									d="M21.8231 -0.00585938H1.44143C0.884103 -0.00585938 0.43042 0.38874 0.43042 0.874966V18.6601C0.43042 19.1451 0.884103 19.5409 1.44143 19.5409H21.823C22.3818 19.5409 22.8355 19.1451 22.8355 18.6601V0.874966C22.8355 0.38874 22.3818 -0.00585937 21.8231 -0.00585937V-0.00585938ZM11.633 6.35659C13.7923 6.35659 15.5426 7.88367 15.5426 9.76749C15.5426 11.6513 13.7923 13.1784 11.633 13.1784C9.47368 13.1784 7.7233 11.6513 7.7233 9.76749C7.7233 7.88367 9.47368 6.35659 11.633 6.35659ZM20.0349 17.0976H3.23106V8.54584H5.07527C4.97863 8.94044 4.92262 9.34846 4.92262 9.76749C4.92262 12.9964 7.93331 15.6217 11.6329 15.6217C15.334 15.6217 18.3432 12.9964 18.3432 9.76749C18.3432 9.34846 18.2872 8.94044 18.192 8.54584H20.0348V17.0976H20.0349ZM20.0349 6.10249H15.834V2.43749H20.0349V6.10249Z"
+									fill="#5B5A7E" />
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</footer>
 	</div>
+	<script src="Js/script.js"></script>
+	<script src="Js/authors.js"></script>
 </body>
 
 </html>

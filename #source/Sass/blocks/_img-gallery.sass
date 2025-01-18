@@ -14,26 +14,27 @@ $trTime: .3s
 		z-index: -1
 		transform: translate(0, -11%)
 	&__item
-		&-img
-			@include image-fit
+		flex: 0 1 30%
+		position: relative
+		padding: 0 0 calc( 173/590*100% )
+		opacity: 0.5
+		transition: opacity $trTime
+		z-index: 4
+		box-shadow: #515076 0 -6px 0 0
+		opacity: 0.5
 		&:hover
 			opacity: 0.8
+		&-img
+			@include image-fit
 		&_active
-			flex: 0 1 30%
-			position: relative
-			padding: 0 0 calc( 173/590*100% )
-			opacity: 0.5
-			transition: opacity $trTime
 			opacity: 1
-			box-shadow: #515076 0 -6px 0 0
-	&__item
-		@extend .img-gallery__item_active
-		opacity: 0.5
+			&:hover
+				opacity: 1
 	&__button
 		position: absolute
 		top: 0
 		left: 0
 		right: 0
 		bottom: 0
-		z-index: 2
+		z-index: 5
 		background: transparent
