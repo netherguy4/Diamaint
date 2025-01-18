@@ -15,10 +15,15 @@ $trTime: .3s
 		.product__button-img
 			filter: brightness(2)
 			scale: 1.5
+	&:active
+		.product__button-img
+			transition: scale .1s
+			scale: 0.75
 	&_sale
 		@extend .product
 		flex: 1 1 380px
 	&_sale-img
+		user-select: none
 		position: absolute
 		color: #515076
 		top: 20px
@@ -37,6 +42,7 @@ $trTime: .3s
 		position: relative
 		padding: 0 0 280px
 		margin: 0 -40px
+		user-select: none
 		&_sale
 			@extend .product__image
 			padding: 0 0 350px
@@ -94,6 +100,8 @@ $trTime: .3s
 		z-index: 1
 		background: transparent
 		&-img
+			user-select: none
 			align-self: flex-end
 			margin: 0 0 0 auto
 			transition: filter $trTime, scale $trTime
+			transform-origin: bottom right

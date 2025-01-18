@@ -10,6 +10,7 @@
 		z-index: 1
 		filter: brightness(0) saturate(100%) invert(97%) sepia(2%) saturate(2984%) hue-rotate(189deg) brightness(98%) contrast(92%)
 		transform: translate(0, 20%)
+		user-select: none
 	&__content
 		position: relative
 		display: flex
@@ -33,6 +34,7 @@
 		position: relative
 		flex: 1 1 auto
 		user-select: none
+		overflow: hidden
 	&__image
 		position: absolute
 		max-width: 100%
@@ -48,11 +50,13 @@
 			transform: translate(-50%, -50%)
 		&_girl
 			@extend .hero__image
+			// opacity: 0
 			top: 57%
 			left: 0
 			transform: translate(10%, -50%)
 			scale: 1.25
 			filter: brightness(1.4) saturate(0.8)
+			// animation: top-slide 2s ease-out 0s 1 normal forwards
 		&_berries
 			@extend .hero__image
 			width: 174px

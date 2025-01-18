@@ -2,6 +2,7 @@ $trTime: .3s
 .shop-special
 	position: relative
 	&__bg-img
+		user-select: none
 		position: absolute
 		width: 1127.97px
 		height: 1066.411px
@@ -24,6 +25,7 @@ $trTime: .3s
 		position: relative
 		overflow: hidden
 		&::before
+			transform-origin: top center
 			transition: box-shadow $trTime, color $trTime, scale $trTime
 			position: absolute
 			top: 0

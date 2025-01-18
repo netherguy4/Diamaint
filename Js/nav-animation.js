@@ -3,8 +3,8 @@
 const header = document.querySelector(".header");
 const nav = header.querySelectorAll(".navigation__button_active, .navigation__button");
 const navDeco = header.querySelector(".navigation__active-element");
-const shoppingCart = header.querySelector(".header__shopping-cart-img");
 let lastKnownScrollPosition = 0;
+let setTimeoutId = null;
 
 
 header.addEventListener('click', (e) => {
@@ -16,24 +16,27 @@ header.addEventListener('click', (e) => {
 	}
 })
 
-document.addEventListener("scroll", () => {
-	if (!header.classList.contains('header_hidden') && lastKnownScrollPosition < window.scrollY) {
-		header.classList.add('header_hidden');
-	} else if (header.classList.contains('header_hidden') && lastKnownScrollPosition > window.scrollY) {
-		header.classList.remove('header_hidden');
-	} else null;
-	lastKnownScrollPosition = window.scrollY;
-});
+document.addEventListener("scroll", scrollListener);
 
 document.querySelector('.about__button').addEventListener('click', () => {
 	navClick(nav[1]);
 })
 
-function animateCart() {
-	shoppingCart.classList.add('header__shopping-cart-img_active');
-	setTimeout((e) => {
-		shoppingCart.classList.remove('header__shopping-cart-img_active');
-	}, '1000');
+function scrollListener() {
+	let scrollBy = [
+		document.querySelector('.about').getBoundingClientRect().y - 300,
+		document.querySelector('.catalogue__title').getBoundingClientRect().y - 300,
+		document.querySelector('.slider-special__title').getBoundingClientRect().y - 300,
+		document.querySelector('.hero__title').getBoundingClientRect().y - 300,
+		document.querySelector('.authors__title').getBoundingClientRect().y - 300
+	];
+	for (let x = scrollBy.length; x > 0; x--) {
+		if (scrollBy[x] <= 0) {
+			navClick(nav[x], 1);
+			break;
+		} else navClick(nav[0], 1);
+	}
+	lastKnownScrollPosition = window.scrollY;
 }
 
 function navClick(button, noscroll) {
@@ -53,9 +56,11 @@ function navClick(button, noscroll) {
 	];
 	let oldButton = header.querySelector(".navigation__button_active");
 	let newButton = button;
+	if (!noscroll) document.removeEventListener("scroll", scrollListener);
+	if (!noscroll) clearTimeout(setTimeoutId);
 	oldButton.classList.remove('navigation__button_active');
 	newButton.classList.add('navigation__button_active');
-	for (let x = 0; x < 5; x++) {
+	for (let x = 0; x < scrollBy.length; x++) {
 		if (oldButton == nav[x]) {
 			navDeco.classList.remove(classes[x]);
 		}
@@ -68,5 +73,10 @@ function navClick(button, noscroll) {
 				})
 			};
 		}
+	}
+	if (!noscroll) {
+		setTimeoutId = setTimeout(() => {
+			document.addEventListener("scroll", scrollListener);
+		}, '1000');
 	}
 }
