@@ -556,9 +556,11 @@ h6 {
   }
 }
 
-.about__content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+@media (min-width: 767px) {
+  .about__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+  }
 }
 .about__bg-img {
   position: relative;
@@ -632,11 +634,11 @@ h6 {
   font-family: "Playfair Display";
   font-weight: 400;
   line-height: 212.52px;
-  font-size: 170px;
+  font-size: 100px;
+  grid-column: span 2;
 }
-@media (min-width: 1465px) {
+@media (min-width: 767px) {
   .about__title {
-    grid-column: span 2;
     font-size: 230px;
   }
 }
@@ -847,7 +849,7 @@ h6 {
   text-align: center;
   color: #D6D4E7;
   font-family: "Playfair Display";
-  font-size: 330px;
+  font-size: 20rem;
   font-weight: 400;
   line-height: 92.4%;
   -webkit-user-select: none;

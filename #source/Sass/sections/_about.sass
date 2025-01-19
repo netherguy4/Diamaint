@@ -1,8 +1,9 @@
 $trTime: .3s ease-out
 .about
 	&__content
-		display: grid
-		grid-template-columns: repeat(auto-fit,minmax(450px, 1fr))
+		@media (min-width: 767px)
+			display: grid
+			grid-template-columns: repeat(auto-fit,minmax(460px, 1fr))
 	&__bg-img
 		position: relative
 		z-index: -1
@@ -57,9 +58,9 @@ $trTime: .3s ease-out
 		font-family: "Playfair Display"
 		font-weight: 400
 		line-height: 212.52px
-		font-size: 170px
-		@media (min-width: 1465px)
-			grid-column: span 2
+		font-size: 100px
+		grid-column: span 2
+		@media (min-width: 767px)
 			font-size: 230px
 	&__subtitle
 		color: #63678C
