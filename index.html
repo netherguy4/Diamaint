@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<title>Diamaint</title>
 	<link rel="icon" type="image/X-icon" href="Img/dandelion.ico">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="Css/style.css">
 </head>
 
@@ -183,32 +184,52 @@
 										<div class="slider-special__title title">Акции</div>
 										<p class="slider-special__subtitle">Каждый месяц мы отбираем специальную линейку
 											продуктов, которая нравится вам и снижаем цены!</p>
-										<button type="button" class="slider-special__button_left slider-special__button_disabled">
-											<svg class="slider-special__button-img" xmlns="http://www.w3.org/2000/svg" width="74"
-												height="74" viewBox="0 0 74 74" fill="none">
-												<path d="M33.6002 27.1771L43.1489 36.7258L33.6002 46.2745" stroke="currentColor"
-													stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-											</svg>
-										</button>
-										<button type="button" class="slider-special__button_right">
-											<svg class="slider-special__button-img" xmlns="http://www.w3.org/2000/svg" width="74"
-												height="74" viewBox="0 0 74 74" fill="none">
-												<path d="M33.6002 27.1771L43.1489 36.7258L33.6002 46.2745" stroke="currentColor"
-													stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-											</svg>
-										</button>
+										<button type="button" class="slider-special__button-prev swiper-button-prev"></button>
+										<button type="button" class="slider-special__button-next swiper-button-next"></button>
 									</div>
 									<div class="slider-special__slider-section">
-										<div class="slider-special__slider-section-body">
-											<div class="slider-special__number">01</div>
-											<p class="slider-special__slider-text">Invisible symphony — ваша волшебная палочка для
-												борьбы с несовершенствами</p>
-											<p class="slider-special__slider-text">Сочетая энергию природы и возможности науки
-												восстанавливает вашу кожу, помогает регенерации клеток, разглаживает рельеф,
-												интенсивно
-												увлажняет надолго.</p>
-											<img class="slider-special__img" src="Img/product-img2.webp" alt="">
-											<div class="slider-special__gradient"></div>
+										<p class="slider-special__slider-description _active">Для нормальной кожи</p>
+										<p class="slider-special__slider-description">Для жирной кожи</p>
+										<p class="slider-special__slider-description">Для сухой кожи</p>
+										<div class="slider swiper">
+											<div class="slider__wrapper swiper-wrapper">
+												<div class="slider__slide swiper-slide">
+													<div class="slider__number">01</div>
+													<p class="slider__text">Invisible symphony — ваша волшебная палочка
+														для
+														борьбы с несовершенствами</p>
+													<p class="slider__text">Сочетая энергию природы и возможности науки
+														восстанавливает вашу кожу, помогает регенерации клеток, разглаживает рельеф,
+														интенсивно
+														увлажняет надолго.</p>
+													<img class="slider__img" src="Img/product-img2.webp" alt="">
+													<div class="slider__gradient"></div>
+												</div>
+												<div class="slider__slide swiper-slide">
+													<div class="slider__number">02</div>
+													<p class="slider__text">Invisible symphony — ваша волшебная палочка
+														для
+														борьбы с несовершенствами</p>
+													<p class="slider__text">Сочетая энергию природы и возможности науки
+														восстанавливает вашу кожу, помогает регенерации клеток, разглаживает рельеф,
+														интенсивно
+														увлажняет надолго.</p>
+													<img loading="lazy" class="slider__img" src="Img/product-img1.webp" alt="">
+													<div class="slider__gradient"></div>
+												</div>
+												<div class="slider__slide swiper-slide">
+													<div class="slider__number">03</div>
+													<p class="slider__text">Invisible symphony — ваша волшебная палочка
+														для
+														борьбы с несовершенствами</p>
+													<p class="slider__text">Сочетая энергию природы и возможности науки
+														восстанавливает вашу кожу, помогает регенерации клеток, разглаживает рельеф,
+														интенсивно
+														увлажняет надолго.</p>
+													<img loading="lazy" class="slider__img" src="Img/product-img3.webp" alt="">
+													<div class="slider__gradient"></div>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -426,11 +447,13 @@
 			</div>
 		</footer>
 	</div>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script src="Js/nav-animation.js"></script>
 	<script src="Js/authors-gallery.js"></script>
 	<script src="Js/cart-animation.js"></script>
 	<script src="Js/bg-img.js"></script>
 	<script src="Js/google-map.js"></script>
+	<script src="Js/slider.js"></script>
 </body>
 
 </html>

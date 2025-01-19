@@ -1669,21 +1669,35 @@ h6 {
   font-weight: 500;
   line-height: 199.99%;
 }
-.slider-special__button, .slider-special__button_right, .slider-special__button_left {
+.slider-special__button, .slider-special__button-next, .slider-special__button-prev {
   background: none;
   color: #888794;
   border-radius: 50%;
   overflow: hidden;
   position: absolute;
-  bottom: 0;
+  top: calc(100% - 36.5px);
   -webkit-transition: background-color 0.3s ease-out, color 0.3s ease-out, -webkit-box-shadow 0.3s ease-out, -webkit-transform 0.3s ease-out;
   transition: background-color 0.3s ease-out, color 0.3s ease-out, -webkit-box-shadow 0.3s ease-out, -webkit-transform 0.3s ease-out;
   transition: background-color 0.3s ease-out, color 0.3s ease-out, box-shadow 0.3s ease-out, transform 0.3s ease-out;
   transition: background-color 0.3s ease-out, color 0.3s ease-out, box-shadow 0.3s ease-out, transform 0.3s ease-out, -webkit-box-shadow 0.3s ease-out, -webkit-transform 0.3s ease-out;
   border: 2px solid #888794;
+  width: 73px;
+  height: 73px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.slider-special__button::after, .slider-special__button-next::after, .slider-special__button-prev::after {
+  scale: 0.5;
 }
 @media (hover: hover) {
-  .slider-special__button:hover, .slider-special__button_right:hover, .slider-special__button_left:hover {
+  .slider-special__button:hover, .slider-special__button-next:hover, .slider-special__button-prev:hover {
     background-color: #515076;
     color: rgba(255, 255, 255, 0.8);
     -webkit-box-shadow: #515076 0 7px 0 0;
@@ -1694,7 +1708,7 @@ h6 {
   }
 }
 @media (hover: none) {
-  .slider-special__button:active, .slider-special__button_right:active, .slider-special__button_left:active {
+  .slider-special__button:active, .slider-special__button-next:active, .slider-special__button-prev:active {
     background-color: #515076;
     color: rgba(255, 255, 255, 0.8);
     -webkit-box-shadow: #515076 0 7px 0 0;
@@ -1704,7 +1718,7 @@ h6 {
             transform: translateY(-7px);
   }
 }
-.slider-special__button:active, .slider-special__button_right:active, .slider-special__button_left:active {
+.slider-special__button:active, .slider-special__button-next:active, .slider-special__button-prev:active {
   -webkit-transition: -webkit-box-shadow 0.1s, -webkit-transform 0.1s;
   transition: -webkit-box-shadow 0.1s, -webkit-transform 0.1s;
   transition: box-shadow 0.1s, transform 0.1s;
@@ -1715,39 +1729,28 @@ h6 {
   -webkit-box-shadow: #515076 0 1px 0 0;
           box-shadow: #515076 0 1px 0 0;
 }
-.slider-special__button_left {
-  scale: -1 1;
-  left: 0;
-}
-.slider-special__button_right {
-  left: 93px;
-}
-.slider-special__button_disabled {
-  opacity: 0.4;
-  cursor: default;
+.slider-special__button-next {
+  left: 103px;
 }
 .slider-special__slider-section {
   position: relative;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 810px;
           flex: 1 0 810px;
-  background: #F7F7FA;
+  min-width: 0;
+  position: relative;
   -webkit-box-shadow: -40px 40px 0px 0px #515076;
           box-shadow: -40px 40px 0px 0px #515076;
 }
-.slider-special__slider-section-body {
-  position: relative;
-  overflow: hidden;
-  padding: 60px 330px 65px 60px;
-}
-.slider-special__slider-section::before {
-  content: "для нормальной кожи";
-  -webkit-transform: rotate(-90deg) translate(0, -80%);
-      -ms-transform: rotate(-90deg) translate(0, -80%);
-          transform: rotate(-90deg) translate(0, -80%);
+.slider-special__slider-description {
+  rotate: -90deg;
+  -webkit-transform: translate(0, 80%);
+      -ms-transform: translate(0, 80%);
+          transform: translate(0, 80%);
   position: absolute;
   bottom: 0;
   left: 0;
+  z-index: 4;
   -webkit-transform-origin: left center;
       -ms-transform-origin: left center;
           transform-origin: left center;
@@ -1758,68 +1761,17 @@ h6 {
   line-height: 199.99%;
   letter-spacing: 2.21px;
   text-transform: uppercase;
+  opacity: 0;
+  -webkit-transition: opacity 0.7s, -webkit-transform 0.3s ease-out;
+  transition: opacity 0.7s, -webkit-transform 0.3s ease-out;
+  transition: opacity 0.7s, transform 0.3s ease-out;
+  transition: opacity 0.7s, transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+.slider-special__slider-description._active {
   opacity: 0.8;
-}
-.slider-special__number {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  width: 62px;
-  height: 62px;
-  border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: #EDECF6;
-}
-.slider-special__slider-text {
-  margin: 30px 0 0;
-  color: #888794;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 199.99%;
-}
-.slider-special__slider-text:nth-child(2) {
-  color: #4C5072;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 130%;
-  max-width: 337px;
-}
-.slider-special__img {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  -webkit-transform: translate(0, -35%);
-      -ms-transform: translate(0, -35%);
-          transform: translate(0, -35%);
-  scale: 1.3;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-.slider-special__gradient {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 12%;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(247, 247, 250, 0)), color-stop(60%, rgb(247, 247, 250)), to(rgb(247, 247, 250)));
-  background: linear-gradient(to right, rgba(247, 247, 250, 0) 0%, rgb(247, 247, 250) 60%, rgb(247, 247, 250) 100%);
+  -webkit-transform: translate(0, -80%);
+      -ms-transform: translate(0, -80%);
+          transform: translate(0, -80%);
 }
 
 .article {
@@ -1998,6 +1950,82 @@ h6 {
   bottom: 0;
   z-index: 5;
   background: transparent;
+}
+
+.slider {
+  background: #F7F7FA;
+}
+.slider__slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 60px 330px 65px 60px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  overflow: hidden;
+}
+.slider__number {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #EDECF6;
+}
+.slider__text {
+  margin: 30px 0 0;
+  color: #888794;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 199.99%;
+}
+.slider__text:nth-child(2) {
+  color: #4C5072;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 130%;
+  max-width: 337px;
+}
+.slider__img {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(0, -35%);
+      -ms-transform: translate(0, -35%);
+          transform: translate(0, -35%);
+  scale: 1.3;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.slider__gradient {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 12%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(247, 247, 250, 0)), color-stop(60%, rgb(247, 247, 250)), to(rgb(247, 247, 250)));
+  background: linear-gradient(to right, rgba(247, 247, 250, 0) 0%, rgb(247, 247, 250) 60%, rgb(247, 247, 250) 100%);
 }
 
 .container {

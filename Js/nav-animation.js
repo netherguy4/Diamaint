@@ -48,11 +48,11 @@ function navClick(button, noscroll) {
 		"navigation__active-element_authors"
 	];
 	let scrollBy = [
-		document.querySelector('.about').getBoundingClientRect().y - 300,
-		document.querySelector('.catalogue__title').getBoundingClientRect().y - 300,
-		document.querySelector('.slider-special__title').getBoundingClientRect().y - 150,
+		document.querySelector('.about').getBoundingClientRect().y - 100,
+		document.querySelector('.catalogue__title').getBoundingClientRect().y - 100,
+		document.querySelector('.slider-special__title').getBoundingClientRect().y - 100,
 		document.querySelector('.hero__title').getBoundingClientRect().y - 100,
-		document.querySelector('.authors__title').getBoundingClientRect().y - 150
+		document.querySelector('.authors__title').getBoundingClientRect().y - 100
 	];
 	let oldButton = header.querySelector(".navigation__button_active");
 	let newButton = button;

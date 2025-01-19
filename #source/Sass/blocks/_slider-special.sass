@@ -22,9 +22,16 @@ $trTime: .3s ease-out
 		border-radius: 50%
 		overflow: hidden
 		position: absolute
-		bottom: 0
+		top: calc( 100% - 73px/2 )
 		transition: background-color $trTime, color $trTime, box-shadow $trTime, transform $trTime
 		border: 2px solid #888794
+		width: 73px
+		height: 73px
+		display: flex
+		align-items: center
+		justify-content: center
+		&::after
+			scale: 0.5
 		@include hover
 			background-color: #515076
 			color: rgba(255, 255, 255, 0.8)
@@ -34,84 +41,34 @@ $trTime: .3s ease-out
 			transition: box-shadow .1s, transform .1s
 			transform: translateY(-1px)
 			box-shadow: #515076 0 1px 0 0
-		&_left
+		&-prev
 			@extend .slider-special__button
-			scale: -1 1
-			left: 0
-		&_right
+		&-next
 			@extend .slider-special__button
-			left: 93px
-		&_disabled
-			opacity: 0.4
-			cursor: default
-		&-img
+			left: 103px
 	&__slider-section
 		position: relative
 		flex: 1 0 810px
-		background: #F7F7FA
+		min-width: 0
+		position: relative
 		box-shadow: -40px 40px 0px 0px #515076
-		// display: flex
-		// flex-direction: row
-		// overflow: hidden
-		&-body
-			position: relative
-			overflow: hidden
-			padding: 60px 330px 65px 60px
-		&::before
-			content: 'для нормальной кожи'
-			transform: rotate(-90deg) translate(0, -80%)
-			position: absolute
-			bottom: 0
-			left: 0
-			transform-origin: left center
-			color: #FFF
-			font-family: Montserrat
-			font-size: 13px
-			font-weight: 500
-			line-height: 199.99%
-			letter-spacing: 2.21px
-			text-transform: uppercase
-			opacity: 0.8
-	&__number
-		user-select: none
-		width: 62px
-		height: 62px
-		border-radius: 50%
-		display: flex
-		align-items: center
-		justify-content: center
-		background: #EDECF6
-	&__slider-text
-		margin: 30px 0 0
-		color: #888794
-		font-size: 16px
-		font-style: normal
+	&__slider-description
+		rotate: -90deg
+		transform: 	translate(0, 80%)
+		position: absolute
+		bottom: 0
+		left: 0
+		z-index: 4
+		transform-origin: left center
+		color: #FFF
+		font-family: Montserrat
+		font-size: 13px
 		font-weight: 500
 		line-height: 199.99%
-		&:nth-child(2)
-			color: #4C5072
-			font-size: 30px
-			font-style: normal
-			font-weight: 300
-			line-height: 130%
-			max-width: 337px
-	&__img
-		position: absolute
-		top: 50%
-		right: 0
-		transform: translate(0, -35%)
-		scale: 1.3
-		user-select: none
-		// &-img
-		// 	// width: 70%
-		// 	height: 100%
-		// 	// object-fit: contain
-		// 	scale: 1
-	&__gradient
-		user-select: none
-		position: absolute
-		top: 0
-		right: 0
-		bottom: 0
-		width: 12%
-		background: linear-gradient(to right, rgba(247,247,250,0) 0%,rgba(247,247,250,1) 60%,rgba(247,247,250,1) 100%)
+		letter-spacing: 2.21px
+		text-transform: uppercase
+		opacity: 0
+		transition: opacity .7s, transform $trTime
+		&._active
+			opacity: 0.8
+			transform: 	translate(0, -80%)
