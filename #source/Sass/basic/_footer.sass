@@ -40,6 +40,25 @@ $trTime: .3s
 		display: flex
 		flex-direction: column
 		padding: 50px 10px 66px 78px
+	&__map
+		position: absolute
+		left: 0
+		top: 0
+		bottom: 0
+		z-index: -1
+		transform: translate(120%, 0)
+		box-shadow: 0px -6px 0px 0px #515076
+		border: 5px solid #fff
+		opacity: 0
+		visibility: hidden
+		transition: opacity .5s
+		&._active
+			opacity: 1
+			visibility: visible
+		& iframe
+			max-height: 100%
+			max-width: 100%
+			object-fit: contain
 	&__title
 
 	&__adress
@@ -68,6 +87,8 @@ $trTime: .3s
 			@include hover
 				&::after
 					width: 100%
+			&_map
+
 	&__socials
 		margin: 10px 0 0 9px
 		display: flex

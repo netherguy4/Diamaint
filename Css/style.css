@@ -462,6 +462,33 @@ h6 {
           flex-direction: column;
   padding: 50px 10px 66px 78px;
 }
+.footer__map {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  -webkit-transform: translate(120%, 0);
+      -ms-transform: translate(120%, 0);
+          transform: translate(120%, 0);
+  -webkit-box-shadow: 0px -6px 0px 0px #515076;
+          box-shadow: 0px -6px 0px 0px #515076;
+  border: 5px solid #fff;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+.footer__map._active {
+  opacity: 1;
+  visibility: visible;
+}
+.footer__map iframe {
+  max-height: 100%;
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .footer__adress {
   display: -webkit-box;
   display: -ms-flexbox;
