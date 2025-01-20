@@ -1,28 +1,36 @@
 $trTime: .3s ease-out
 .slider-special
 	&__content
-		display: flex
-		gap: 185px
 		font-family: Montserrat
-		align-items: stretch
+		@media (min-width: 1350px)
+			display: flex
+			gap: 185px
+			align-items: stretch
 	&__title-section
 		width: 337px
 		position: relative
+		@media (max-width: 1350px)
+			margin: 0 auto
+			padding: 0 0 100px
+		@media (max-width: 767px)
+			padding: 0
 	&__title
 		padding: 20px 0 0 0
 	&__subtitle
-		margin: 100px 0 0
 		color: #888794
 		font-size: 18px
 		font-weight: 500
 		line-height: 199.99%
+		margin: 20px 0 0
+		@media (min-width: 1350px)
+			margin: 100px 0 0
 	&__button
 		background: none
 		color: #888794
 		border-radius: 50%
 		overflow: hidden
 		position: absolute
-		top: calc( 100% - 73px/2 )
+		top: calc( 100% - 73px )
 		transition: background-color $trTime, color $trTime, box-shadow $trTime, transform $trTime
 		border: 2px solid #888794
 		width: 73px
@@ -30,6 +38,10 @@ $trTime: .3s ease-out
 		display: flex
 		align-items: center
 		justify-content: center
+		@media (max-width: 767px)
+			display: none
+		@media (min-width: 1350px)
+			top: calc( 100% - 73px/2 )
 		&::after
 			scale: 0.5
 		@include hover
@@ -45,13 +57,22 @@ $trTime: .3s ease-out
 			@extend .slider-special__button
 		&-next
 			@extend .slider-special__button
-			left: 103px
+			@media (min-width: 1350px)
+				left: 103px
 	&__slider-section
 		position: relative
-		flex: 1 0 810px
 		min-width: 0
 		position: relative
 		box-shadow: -40px 40px 0px 0px #515076
+		@media (min-width: 1350px)
+			flex: 1 0 810px
+		@media (max-width: 1350px)
+			margin: 50px
+		@media (max-width: 767px)
+			margin: 20px
+		@media (max-width: 330px)
+			margin: 0
+			box-shadow: none
 	&__slider-description
 		rotate: -90deg
 		transform: 	translate(0, 80%)
@@ -69,6 +90,8 @@ $trTime: .3s ease-out
 		text-transform: uppercase
 		opacity: 0
 		transition: opacity .7s, transform $trTime
+		@media (max-width: 330px)
+			display: none
 		&._active
 			opacity: 0.8
 			transform: 	translate(0, -80%)

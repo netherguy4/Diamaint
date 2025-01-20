@@ -3,15 +3,20 @@ $trTime: .3s
 	flex: 1 1 auto
 	position: relative
 	&__list
-		display: flex
-		gap: 10px
+		display: none
+		@media (min-width: 1000px)
+			display: flex
+			gap: 10px
 	&__active-element
-		position: absolute
-		width: 110px
-		height: 66px
-		background: rgba(81, 80, 118, 0.10)
-		z-index: 1
-		transition: transform $trTime
+		display: none
+		@media (min-width: 1000px)
+			display: block
+			position: absolute
+			width: 110px
+			height: 66px
+			background: rgba(81, 80, 118, 0.10)
+			z-index: 1
+			transition: transform $trTime
 		&_about
 			transform: translateX(0)
 		&_catalogue

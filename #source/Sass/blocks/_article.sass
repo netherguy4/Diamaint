@@ -10,12 +10,13 @@ $trTime: .3s
 	flex-direction: column
 	@include hover
 		box-shadow: #515076 0 -12px 0 0
-	&:first-child
-		grid-row: span 2
-		transform: translate(0, 51%)
-	&:nth-child(3)
-		grid-row: span 2
-		transform: translate(0, 30%)
+	@media (min-width: 970px)
+		&:first-child
+			grid-row: span 2
+			transform: translate(0, 51%)
+		&:nth-child(3)
+			grid-row: span 2
+			transform: translate(0, 30%)
 	&__title
 		position: relative
 		color: #515076

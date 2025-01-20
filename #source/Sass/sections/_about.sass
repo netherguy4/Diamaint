@@ -1,14 +1,24 @@
 $trTime: .3s ease-out
 .about
 	&__content
+		display: flex
+		flex-direction: column
 		@media (min-width: 767px)
 			display: grid
 			grid-template-columns: repeat(auto-fit,minmax(460px, 1fr))
 	&__bg-img
-		position: relative
-		z-index: -1
-		grid-row: span 2
 		user-select: none
+		z-index: -1
+		@media (max-width: 767px)
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			overflow: hidden
+		@media (min-width: 767px)
+			position: relative
+			grid-row: span 2
 		&_wide
 			position: relative
 			z-index: -1
@@ -18,12 +28,19 @@ $trTime: .3s ease-out
 		&_bottom-slide
 			animation: bottom-slide 3s ease 1 normal running 0s forwards
 	#bg-img-1
-		position: absolute
-		top: -34%
-		left: -119%
-		width: 1455px
-		height: 1113px
-		object-fit: cover
+		position: relative
+		width: 500px
+		top: 15%
+		left: 30%
+		@media (max-width: 620px)
+			display: none
+		@media (min-width: 767px)
+			position: absolute
+			width: 1455px
+			height: 1113px
+			object-fit: cover
+			top: -34%
+			left: -119%
 	#bg-img-2
 		position: absolute
 		top: -42%
@@ -34,34 +51,49 @@ $trTime: .3s ease-out
 		opacity: 0.2
 		scale: -1 1
 		filter: grayscale(50%)
+		@media (max-width: 767px)
+			display: none
 	#bg-img-3
-		position: absolute
-		top: -200%
-		left: -43%
-		width: 1734px
-		height: 1158px
-		object-fit: cover
-		scale: -1 1
-		z-index: -3
+		width: 130%
+		margin: -20% 0 0
+		@media (min-width: 767px)
+			position: absolute
+			margin: 0
+			top: -200%
+			left: -43%
+			width: 1734px
+			height: 1158px
+			object-fit: cover
+			scale: -1 1
+			z-index: -3
 	&__gradient
-		// background: #000
-		background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 35%,rgba(255,255,255,1) 73%,rgba(255,255,255,1) 100%)
 		position: absolute
-		top: -200%
-		left: 20%
-		width: 1000px
-		height: 1158px
-		z-index: -2
-		user-select: none
+		bottom: 0
+		left: 0
+		height: 100%
+		width: 100%
+		background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 35%,rgba(255,255,255,1) 73%,rgba(255,255,255,1) 100%)
+		@media (min-width: 767px)
+			position: absolute
+			top: -200%
+			left: 20%
+			width: 1000px
+			height: 1158px
+			z-index: -2
+			user-select: none
 	&__title
 		color: #515076
 		font-family: "Playfair Display"
 		font-weight: 400
-		line-height: 212.52px
-		font-size: 100px
+		font-size: 54px
 		grid-column: span 2
+		@media (min-width: 340px)
+			font-size: 66px
+		@media (min-width: 500px)
+			font-size: 100px
 		@media (min-width: 767px)
 			font-size: 230px
+			line-height: 212.52px
 	&__subtitle
 		color: #63678C
 		font-family: Montserrat
@@ -69,12 +101,16 @@ $trTime: .3s ease-out
 		line-height: 132.675%
 		max-width: 250px
 		margin: 95px 0 0
+		@media (max-width: 767px)
+			margin: 20px 0 0
 	#about__subtitle-2
 		color: #757AA5
 		font-weight: 300
 		line-height: 109.4%
 		max-width: 350px
 		margin: 95px auto
+		@media (max-width: 767px)
+			margin: 40px auto
 	&__article
 		display: flex
 		flex-direction: column
@@ -95,6 +131,8 @@ $trTime: .3s ease-out
 			color: #828282
 			font-weight: 500
 			margin: 60px 0 45px 0
+			@media (max-width: 767px)
+				margin: 20px 0 0
 	&__button
 		user-select: none
 		margin: 95px auto
@@ -114,6 +152,8 @@ $trTime: .3s ease-out
 		padding: 0 30px
 		transition: background-color $trTime, color $trTime, box-shadow .2s, transform .2s
 		border: 2px solid #c9c9c9
+		@media (max-width: 767px)
+			margin: 40px auto
 		@include hover
 			background-color: #515076
 			box-shadow: #515076 0 7px 0 0
@@ -132,6 +172,8 @@ $trTime: .3s ease-out
 		text-transform: uppercase
 		max-width: 172px
 		margin: 95px 0 0 auto
+		@media (max-width: 767px)
+			display: none
 		&_bold
 			font-weight: 300
 			font-size: 36.8px

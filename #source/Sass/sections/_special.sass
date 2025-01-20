@@ -4,6 +4,9 @@
 	z-index: 2
 	&__content
 	&__slider
-		margin: 180px 0 0
+		@media (min-width: 767px)
+			margin: 180px 0 0
 	&__shop
-		margin: 270px 0 350px
+		margin: calc( 200/767*100vw ) 0 calc( 200/767*100vw )
+		@media (min-width: 767px)
+			margin: 270px 0 350px

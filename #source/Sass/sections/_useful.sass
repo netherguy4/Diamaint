@@ -5,6 +5,8 @@
 	&__title
 		margin: 125px 0 0
 		text-align: center
+		@media (max-width:767px)
+			margin: calc( 125/767*100vw ) 0 0
 	&__articles
 		margin: 85px 0 0
 		display: grid

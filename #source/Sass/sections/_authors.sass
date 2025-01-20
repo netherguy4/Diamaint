@@ -3,6 +3,10 @@
 		margin: 145px 0 0
 		display: flex
 		gap: 60px
+		@media (max-width: 1200px)
+			flex-direction: column
+		@media (max-width:767px)
+			margin: calc( 145/767*100vw ) 0 0
 	&__text-section
 		position: relative
 		flex: 1 1 37%
@@ -49,8 +53,12 @@
 	&__img-section
 		user-select: none
 		position: relative
-		flex: 1 1 35%
-		margin: 100px 0 0
+		margin: calc( 100/1200*100vw ) 0 0
+		@media (max-width: 1200px)
+			padding: 0 0 100%
+		@media (min-width: 1200px)
+			flex: 1 1 35%
+			margin: 100px 0 0
 		&-bg
 			position: absolute
 			bottom: 0

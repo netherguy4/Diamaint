@@ -1,13 +1,17 @@
 .slider
 	background: #F7F7FA
 	&__wrapper
-
 	&__slide
 		display: flex
 		flex-direction: column
-		padding: 60px 330px 65px 60px
+		padding: 20px 20px 0 20px
 		user-select: none
 		overflow: hidden
+		@media (min-width: 767px)
+			padding: 40px 200px 45px 40px
+		@media (min-width: 950px)
+			padding: 60px 330px 65px 60px
+		@media (max-width: 450px)
 	&__number
 		width: 62px
 		height: 62px
@@ -23,6 +27,10 @@
 		font-style: normal
 		font-weight: 500
 		line-height: 199.99%
+		@media (max-width: 950px)
+			line-height: 100%
+		@media (max-width: 450px)
+			font-size: 14px
 		&:nth-child(2)
 			color: #4C5072
 			font-size: 30px
@@ -30,13 +38,23 @@
 			font-weight: 300
 			line-height: 130%
 			max-width: 337px
+			@media (max-width: 950px)
+				max-width: auto
+				line-height: 120%
+				font-size: 24px
+			@media (max-width: 450px)
+				font-size: 18px
 	&__img
-		position: absolute
-		top: 50%
-		right: 0
-		transform: translate(0, -35%)
-		scale: 1.3
 		user-select: none
+		@media (min-width: 767px)
+			position: absolute
+			right: -7%
+			top: 40%
+			transform: translate(0, -35%)
+		@media (min-width: 950px)
+			scale: 1.3
+			top: 50%
+			right: 0
 	&__gradient
 		user-select: none
 		position: absolute
