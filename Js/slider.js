@@ -4,6 +4,7 @@ const swiper = new Swiper('.swiper', {
 	// Optional parameters
 	direction: 'horizontal',
 	loop: false,
+	grabCursor: true,
 
 	// Navigation arrows
 	navigation: {
@@ -20,5 +21,9 @@ const swiper = new Swiper('.swiper', {
 			activeDescription = sliderDescription[swiper.activeIndex];
 			activeDescription.classList.add('_active');
 		}
+	},
+	keyboard: {
+		enabled: true,
+		onlyInViewport: true,
 	},
 });

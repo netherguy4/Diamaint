@@ -40,6 +40,9 @@ $trTime: .3s
 	&__image
 		position: relative
 		flex: 1 1 auto
+		@media (max-width: 404px)
+			scale: 0.7
+			transform: translate(-25px, 0)
 		&-img
 			user-select: none
 			position: absolute
@@ -73,11 +76,15 @@ $trTime: .3s
 					bottom: 5%
 	&__text-section
 		padding: 0 40px 40px
+		@media (max-width: 404px)
+			padding: 0 20px 40px
 	&__subtitle
 		font-size: 18px
 		font-weight: 400
 		line-height: 135.99%
 		height: 100px
+		@media (max-width: 440px)
+			font-size: calc( 18/440*100vw )
 	&__price
 		display: flex
 		gap: 15px
@@ -88,10 +95,14 @@ $trTime: .3s
 			font-size: 20px
 			font-weight: 500
 			line-height: 135.99%
+			@media (max-width: 404px)
+				font-size: calc(20/404*100vw)
 			&:first-child
 				opacity: 0.6
 				font-size: 18px
 				text-decoration: line-through
+				@media (max-width: 404px)
+					font-size: calc(18/404*100vw)
 	&__button-img
 		transition: filter $trTime, scale $trTime
 		margin: 0 0 0 auto

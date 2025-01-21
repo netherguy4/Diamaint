@@ -20,10 +20,12 @@ $trTime: .3s
 	&__content
 		display: flex
 		gap: 35px
-		align-items: flex-end
+		align-items: flex-start
+		flex-wrap: wrap-reverse
 		@media (max-width:1216px)
-			flex-direction: column
-			align-items: center
+			justify-content: center
+		@media (max-width:860px)
+			flex-wrap: wrap
 	&__product
 		position: relative
 		overflow: hidden
@@ -51,6 +53,8 @@ $trTime: .3s
 			font-size: 36px
 			font-weight: 600
 			line-height: 135.99%
+			@media (max-width: 404px)
+				font-size: calc(36/404*100vw)
 			@media (min-width:1216px)
 				height: 200px
 		&:first-child
