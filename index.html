@@ -15,6 +15,7 @@
 		<header class="header">
 			<div class="container">
 				<div class="header__content">
+					<button type="button" class="header__burger"><span></span></button>
 					<button type="button" class="header__logo"><img class="header__logo-img" src="Img/header__logo.svg"
 							alt="D"></button>
 					<nav class="navigation">
@@ -57,6 +58,38 @@
 			</div>
 		</header>
 		<main class="main">
+			<aside class="sidebar">
+				<nav class="sidebar__navigation">
+					<ul class="sidebar__list">
+						<li class="sidebar__element">
+							<button type="button" class="sidebar__button">О продукте</button>
+						</li>
+						<li class="sidebar__element">
+							<button type="button" class="sidebar__button">Каталог</button>
+						</li>
+						<li class="sidebar__element">
+							<button type="button" class="sidebar__button">Акции</button>
+						</li>
+						<li class="sidebar__element">
+							<button type="button" class="sidebar__button">Полезное</button>
+						</li>
+						<li class="sidebar__element">
+							<button type="button" class="sidebar__button">Авторы</button>
+						</li>
+					</ul>
+				</nav>
+				<div class="sidebar__socials">
+					<a href="#" class="sidebar__social-link">Instagram</a>
+					<a href='#' class="sidebar__social-link">Facebook</a>
+				</div>
+			</aside>
+			<div class="popup">
+				<div class="popup__wrapper">
+					<!-- <div class="popup__item">
+						Товар "Мазь для лица" был добавлен в корзину!
+					</div> -->
+				</div>
+			</div>
 			<div class="main__content">
 				<section class="about">
 					<div class="container">
@@ -116,7 +149,8 @@
 								<h2 class="catalogue__title title">Выбери свой продукт</h2>
 								<div class="catalogue__products">
 									<div class="product">
-										<button type="button" class="product__button"></button>
+										<button type="button" class="product__button" data-name="Увлажняющий мусс" data-bundle=""
+											data-sale="" data-price="2750"></button>
 										<div class="product__content">
 											<div class="product__image">
 												<img class="product__image-img" src="Img/product-img1.webp" alt="">
@@ -129,7 +163,8 @@
 										</div>
 									</div>
 									<div class="product_sale">
-										<button type="button" class="product__button"></button>
+										<button type="button" class="product__button" data-name="Увлажняющая маска" data-bundle=""
+											data-sale="3750" data-price="3500"></button>
 										<svg class="product_sale-img" xmlns="http://www.w3.org/2000/svg" width="68" height="68"
 											viewBox="0 0 68 68" fill="none">
 											<path
@@ -158,7 +193,8 @@
 										</div>
 									</div>
 									<div class="product">
-										<button type="button" class="product__button"></button>
+										<button type="button" class="product__button" data-name="Гель для умывания" data-bundle=""
+											data-sale="" data-price="1650"></button>
 										<div class="product__content">
 											<div class="product__image">
 												<img class="product__image-img" src="Img/product-img3.webp" alt="">
@@ -239,7 +275,9 @@
 								<div class="shop-special__container">
 									<div class="shop-special__content">
 										<div class="shop-special__product product-special">
-											<button type="button" class="product-special__button"></button>
+											<button type="button" class="product-special__button"
+												data-name="Увлажняющий крем + маска" data-bundle="yes" data-sale="5000"
+												data-price="4750"></button>
 											<div class="product-special__content">
 												<div class="product-special__image-section">
 													<div class="product-special__image">
@@ -259,7 +297,9 @@
 											</div>
 										</div>
 										<div class="shop-special__product product-special">
-											<button type="button" class="product-special__button"></button>
+											<button type="button" class="product-special__button"
+												data-name="Увлажняющий мусс + гель" data-bundle="yes" data-sale="4400"
+												data-price="3960"></button>
 											<div class="product-special__content">
 												<div class="product-special__image-section">
 													<div class="product-special__image_2">
@@ -280,7 +320,8 @@
 											</div>
 										</div>
 										<div class="shop-special__product product-special">
-											<button type="button" class="product-special__button"></button>
+											<button type="button" class="product-special__button" data-name="Invisible symphony"
+												data-bundle="yes" data-sale="9400" data-price="7520"></button>
 											<div class="product-special__content">
 												<div class="product-special__image-section">
 													<div class="product-special__image_3">
@@ -447,13 +488,15 @@
 			</div>
 		</footer>
 	</div>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-	<script src="Js/nav-animation.js"></script>
-	<script src="Js/authors-gallery.js"></script>
-	<script src="Js/cart-animation.js"></script>
-	<script src="Js/bg-img.js"></script>
-	<script src="Js/google-map.js"></script>
-	<script src="Js/slider.js"></script>
+	<section class="scripts">
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script src="Js/navigation.js"></script>
+		<script src="Js/authors-gallery.js"></script>
+		<script src="Js/cart-animation.js"></script>
+		<script src="Js/bg-img.js"></script>
+		<script src="Js/google-map.js"></script>
+		<script src="Js/slider.js"></script>
+	</section>
 </body>
 
 </html>

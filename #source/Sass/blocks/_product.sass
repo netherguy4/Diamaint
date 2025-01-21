@@ -84,6 +84,8 @@ $trTime: .3s
 		font-size: 20px
 		font-weight: 500
 		line-height: 135.99%
+		@media (max-width: 404px)
+			font-size: calc(20/404*100vw)
 		&_sale
 			margin: 35px 0 0
 			display: flex
@@ -103,12 +105,16 @@ $trTime: .3s
 				font-size: 24px
 				font-weight: 500
 				line-height: 135.99%
+				@media (max-width: 404px)
+					font-size: calc(24/404*100vw)
 			& p:first-child
 				opacity: 0.6
 				font-size: 18px
 				font-weight: 500
 				line-height: 135.99%
 				text-decoration: line-through
+				@media (max-width: 404px)
+					font-size: calc(18/404*100vw)
 	&__button
 		position: absolute
 		top: 0

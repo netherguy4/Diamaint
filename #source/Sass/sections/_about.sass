@@ -3,22 +3,24 @@ $trTime: .3s ease-out
 	&__content
 		display: flex
 		flex-direction: column
-		@media (min-width: 767px)
+		@media (min-width: 1050px)
 			display: grid
 			grid-template-columns: repeat(auto-fit,minmax(460px, 1fr))
 	&__bg-img
 		user-select: none
 		z-index: -1
-		@media (max-width: 767px)
+		@media (max-width: 1050px)
 			position: absolute
 			top: 0
 			left: 0
 			right: 0
-			bottom: 0
+			bottom: -30%
 			overflow: hidden
-		@media (min-width: 767px)
+		@media (min-width: 1050px)
 			position: relative
 			grid-row: span 2
+			@media (max-width: 1509px)
+				grid-column: 2 / span 1
 		&_wide
 			position: relative
 			z-index: -1
@@ -29,12 +31,13 @@ $trTime: .3s ease-out
 			animation: bottom-slide 3s ease 1 normal running 0s forwards
 	#bg-img-1
 		position: relative
-		width: 500px
-		top: 15%
-		left: 30%
+		// width: 500px
+		width: calc( 1300/1050*100vw )
+		top: 5%
+		left: 0
 		@media (max-width: 620px)
 			display: none
-		@media (min-width: 767px)
+		@media (min-width: 1050px)
 			position: absolute
 			width: 1455px
 			height: 1113px
@@ -43,20 +46,28 @@ $trTime: .3s ease-out
 			left: -119%
 	#bg-img-2
 		position: absolute
-		top: -42%
-		left: -93%
-		width: 976px
-		height: 130%
-		// object-fit: cover
 		opacity: 0.2
-		scale: -1 1
 		filter: grayscale(50%)
-		@media (max-width: 767px)
+		left: 0
+		width: calc( 976/1509*100vw )
+		@media (min-width: 1050px)
+			height: auto
+			top: 65vw
+		@media (min-width: 1300px)
+			top: 50vw
+		@media (min-width: 1509px)
+			transform: none
+			scale: -1 1
+			top: -42%
+			left: -93%
+			width: 976px
+			height: 130%
+		@media (max-width:1050px)
 			display: none
 	#bg-img-3
 		width: 130%
 		margin: -20% 0 0
-		@media (min-width: 767px)
+		@media (min-width: 1509px)
 			position: absolute
 			margin: 0
 			top: -200%
@@ -81,17 +92,21 @@ $trTime: .3s ease-out
 			height: 1158px
 			z-index: -2
 			user-select: none
+			@media (max-width: 1509px)
+				// display: none
+				top: 0
+				left: 0
+				z-index: 0
+				height: auto
+				width: calc( 1000/1500*100vw )
+				transform: translate(12.5%, -12.5%)
 	&__title
 		color: #515076
 		font-family: "Playfair Display"
 		font-weight: 400
-		font-size: 54px
+		font-size: calc( 210/1050*100vw)
 		grid-column: span 2
-		@media (min-width: 340px)
-			font-size: 66px
-		@media (min-width: 500px)
-			font-size: 100px
-		@media (min-width: 767px)
+		@media (min-width: 1050px)
 			font-size: 230px
 			line-height: 212.52px
 	&__subtitle
@@ -101,8 +116,10 @@ $trTime: .3s ease-out
 		line-height: 132.675%
 		max-width: 250px
 		margin: 95px 0 0
-		@media (max-width: 767px)
+		@media (max-width: 1050px)
 			margin: 20px 0 0
+		@media (max-width: 1509px)
+			grid-column: 1 / span 1
 	#about__subtitle-2
 		color: #757AA5
 		font-weight: 300
@@ -111,11 +128,16 @@ $trTime: .3s ease-out
 		margin: 95px auto
 		@media (max-width: 767px)
 			margin: 40px auto
+		@media (max-width: 1509px)
+			grid-column: 1 / span 1
+			margin: 40px 0
 	&__article
 		display: flex
 		flex-direction: column
 		max-width: 390px
 		gap: 30px
+		@media (max-width: 1509px)
+			grid-column: 1 / span 1
 		// padding: 0 20px 0 40px
 	&__text
 		color: var(--body-text, #888794)
@@ -172,7 +194,7 @@ $trTime: .3s ease-out
 		text-transform: uppercase
 		max-width: 172px
 		margin: 95px 0 0 auto
-		@media (max-width: 767px)
+		@media (max-width: 1509px)
 			display: none
 		&_bold
 			font-weight: 300
